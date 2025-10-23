@@ -1,0 +1,158 @@
+2025-10-22 16:47:23,970 - INFO - Market Data ETL Process Started
+2025-10-22 16:47:23,971 - INFO - Fetching data...
+2025-10-22 16:47:23,971 - ERROR - ETL process failed: BloombergVendor.fetch_data() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\IVP_Mahvish\market_data_etl\main.py", line 54, in main
+    etl.fetch_data(symbols)  #Passing symbols
+    ~~~~~~~~~~~~~~^^^^^^^^^
+TypeError: BloombergVendor.fetch_data() takes 1 positional argument but 2 were given
+2025-10-22 19:18:48,598 - INFO - Market Data ETL Process Started
+2025-10-22 19:18:48,640 - INFO - Fetching data for symbols: ['AAPL', 'GOOG']...
+2025-10-22 19:18:48,741 - INFO - Transforming data...
+2025-10-22 19:18:48,742 - INFO - Saving data...
+2025-10-22 19:18:48,751 - INFO - Data saved to CSV: output\Bloomberg_GetData_20251022.csv
+2025-10-22 19:18:48,799 - ERROR - Failed to load data into SQLite: (sqlite3.OperationalError) table bloomberg_getdata has no column named Adj Close
+[SQL: INSERT INTO bloomberg_getdata ("Date", "Open", "High", "Low", "Close", "Adj Close", "Volume", "Symbol", "DailyReturn", "Source", "LoadTime") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: [('2019-01-02 00:00:00.000000', 154.88999938964844, 158.85000610351562, 154.22999572753906, 157.9199981689453, 155.21400451660156, 37039700, 'AAPL', 1.9562262194052116, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-01-03 00:00:00.000000', 143.97999572753906, 145.72000122070312, 142.0, 142.19000244140625, 139.7535400390625, 91312200, 'AAPL', -1.2432235999785075, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-01-04 00:00:00.000000', 144.52999877929688, 148.5500030517578, 143.8000030517578, 148.25999450683594, 145.71951293945312, 58607100, 'AAPL', 2.5807761426988702, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-01-07 00:00:00.000000', 148.6999969482422, 148.8300018310547, 145.89999389648438, 147.92999267578125, 145.39520263671875, 54777800, 'AAPL', -0.517824000177318, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-01-08 00:00:00.000000', 149.55999755859375, 151.82000732421875, 148.52000427246094, 150.75, 148.1668701171875, 41025300, 'AAPL', 0.7956689361004019, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-01-09 00:00:00.000000', 151.2899932861328, 154.52999877929688, 149.6300048828125, 153.30999755859375, 150.6829833984375, 45099100, 'AAPL', 1.3351869668210834, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-01-10 00:00:00.000000', 152.5, 153.97000122070312, 150.86000061035156, 153.8000030517578, 151.1646270751953, 35780700, 'AAPL', 0.8524610175461066, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-01-11 00:00:00.000000', 152.8800048828125, 153.6999969482422, 151.50999450683594, 152.2899932861328, 149.6804656982422, 27023200, 'AAPL', -0.38593117336171634, 'Bloomberg', '2025-10-22 19:18:48')  ... displaying 10 of 504 total bound parameter sets ...  ('2019-12-30 00:00:00.000000', 1350.0, 1353.0, 1334.02001953125, 1336.1400146484375, 1336.1400146484375, 1050900, 'GOOG', -1.026665581597222, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-12-31 00:00:00.000000', 1330.1099853515625, 1338.0, 1329.0849609375, 1337.02001953125, 1337.02001953125, 961800, 'GOOG', 0.5195084809367176, 'Bloomberg', '2025-10-22 19:18:48')]]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-22 19:18:48,799 - ERROR - ETL process failed: (sqlite3.OperationalError) table bloomberg_getdata has no column named Adj Close
+[SQL: INSERT INTO bloomberg_getdata ("Date", "Open", "High", "Low", "Close", "Adj Close", "Volume", "Symbol", "DailyReturn", "Source", "LoadTime") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: [('2019-01-02 00:00:00.000000', 154.88999938964844, 158.85000610351562, 154.22999572753906, 157.9199981689453, 155.21400451660156, 37039700, 'AAPL', 1.9562262194052116, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-01-03 00:00:00.000000', 143.97999572753906, 145.72000122070312, 142.0, 142.19000244140625, 139.7535400390625, 91312200, 'AAPL', -1.2432235999785075, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-01-04 00:00:00.000000', 144.52999877929688, 148.5500030517578, 143.8000030517578, 148.25999450683594, 145.71951293945312, 58607100, 'AAPL', 2.5807761426988702, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-01-07 00:00:00.000000', 148.6999969482422, 148.8300018310547, 145.89999389648438, 147.92999267578125, 145.39520263671875, 54777800, 'AAPL', -0.517824000177318, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-01-08 00:00:00.000000', 149.55999755859375, 151.82000732421875, 148.52000427246094, 150.75, 148.1668701171875, 41025300, 'AAPL', 0.7956689361004019, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-01-09 00:00:00.000000', 151.2899932861328, 154.52999877929688, 149.6300048828125, 153.30999755859375, 150.6829833984375, 45099100, 'AAPL', 1.3351869668210834, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-01-10 00:00:00.000000', 152.5, 153.97000122070312, 150.86000061035156, 153.8000030517578, 151.1646270751953, 35780700, 'AAPL', 0.8524610175461066, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-01-11 00:00:00.000000', 152.8800048828125, 153.6999969482422, 151.50999450683594, 152.2899932861328, 149.6804656982422, 27023200, 'AAPL', -0.38593117336171634, 'Bloomberg', '2025-10-22 19:18:48')  ... displaying 10 of 504 total bound parameter sets ...  ('2019-12-30 00:00:00.000000', 1350.0, 1353.0, 1334.02001953125, 1336.1400146484375, 1336.1400146484375, 1050900, 'GOOG', -1.026665581597222, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-12-31 00:00:00.000000', 1330.1099853515625, 1338.0, 1329.0849609375, 1337.02001953125, 1337.02001953125, 961800, 'GOOG', 0.5195084809367176, 'Bloomberg', '2025-10-22 19:18:48')]]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "C:\Users\mransari\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1936, in _exec_single_context
+    self.dialect.do_executemany(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor,
+        ^^^^^^^
+    ...<2 lines>...
+        context,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\mransari\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 948, in do_executemany
+    cursor.executemany(statement, parameters)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table bloomberg_getdata has no column named Adj Close
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\IVP_Mahvish\market_data_etl\main.py", line 67, in main
+    db_path = writer.save_to_sqlite(transformed_df, vendor_name, interface_name)
+  File "C:\IVP_Mahvish\market_data_etl\utils\file_writer.py", line 30, in save_to_sqlite
+    df.to_sql(table_name, engine, if_exists="append", index=False)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mransari\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\mransari\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 3106, in to_sql
+    return sql.to_sql(
+           ~~~~~~~~~~^
+        self,
+        ^^^^^
+    ...<8 lines>...
+        method=method,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\mransari\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\sql.py", line 844, in to_sql
+    return pandas_sql.to_sql(
+           ~~~~~~~~~~~~~~~~~^
+        frame,
+        ^^^^^^
+    ...<9 lines>...
+        **engine_kwargs,
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\mransari\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\sql.py", line 2030, in to_sql
+    total_inserted = sql_engine.insert_records(
+        table=table,
+    ...<7 lines>...
+        **engine_kwargs,
+    )
+  File "C:\Users\mransari\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\sql.py", line 1579, in insert_records
+    raise err
+  File "C:\Users\mransari\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\sql.py", line 1570, in insert_records
+    return table.insert(chunksize=chunksize, method=method)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mransari\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\sql.py", line 1121, in insert
+    num_inserted = exec_insert(conn, keys, chunk_iter)
+  File "C:\Users\mransari\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\sql.py", line 1012, in _execute_insert
+    result = conn.execute(self.table.insert(), data)
+  File "C:\Users\mransari\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\mransari\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\mransari\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\mransari\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\mransari\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\mransari\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\mransari\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1936, in _exec_single_context
+    self.dialect.do_executemany(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor,
+        ^^^^^^^
+    ...<2 lines>...
+        context,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\mransari\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 948, in do_executemany
+    cursor.executemany(statement, parameters)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) table bloomberg_getdata has no column named Adj Close
+[SQL: INSERT INTO bloomberg_getdata ("Date", "Open", "High", "Low", "Close", "Adj Close", "Volume", "Symbol", "DailyReturn", "Source", "LoadTime") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: [('2019-01-02 00:00:00.000000', 154.88999938964844, 158.85000610351562, 154.22999572753906, 157.9199981689453, 155.21400451660156, 37039700, 'AAPL', 1.9562262194052116, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-01-03 00:00:00.000000', 143.97999572753906, 145.72000122070312, 142.0, 142.19000244140625, 139.7535400390625, 91312200, 'AAPL', -1.2432235999785075, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-01-04 00:00:00.000000', 144.52999877929688, 148.5500030517578, 143.8000030517578, 148.25999450683594, 145.71951293945312, 58607100, 'AAPL', 2.5807761426988702, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-01-07 00:00:00.000000', 148.6999969482422, 148.8300018310547, 145.89999389648438, 147.92999267578125, 145.39520263671875, 54777800, 'AAPL', -0.517824000177318, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-01-08 00:00:00.000000', 149.55999755859375, 151.82000732421875, 148.52000427246094, 150.75, 148.1668701171875, 41025300, 'AAPL', 0.7956689361004019, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-01-09 00:00:00.000000', 151.2899932861328, 154.52999877929688, 149.6300048828125, 153.30999755859375, 150.6829833984375, 45099100, 'AAPL', 1.3351869668210834, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-01-10 00:00:00.000000', 152.5, 153.97000122070312, 150.86000061035156, 153.8000030517578, 151.1646270751953, 35780700, 'AAPL', 0.8524610175461066, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-01-11 00:00:00.000000', 152.8800048828125, 153.6999969482422, 151.50999450683594, 152.2899932861328, 149.6804656982422, 27023200, 'AAPL', -0.38593117336171634, 'Bloomberg', '2025-10-22 19:18:48')  ... displaying 10 of 504 total bound parameter sets ...  ('2019-12-30 00:00:00.000000', 1350.0, 1353.0, 1334.02001953125, 1336.1400146484375, 1336.1400146484375, 1050900, 'GOOG', -1.026665581597222, 'Bloomberg', '2025-10-22 19:18:48'), ('2019-12-31 00:00:00.000000', 1330.1099853515625, 1338.0, 1329.0849609375, 1337.02001953125, 1337.02001953125, 961800, 'GOOG', 0.5195084809367176, 'Bloomberg', '2025-10-22 19:18:48')]]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-22 19:20:59,412 - INFO - Market Data ETL Process Started
+2025-10-22 19:20:59,417 - INFO - Fetching data for symbols: ['AAPL', 'GOOG']...
+2025-10-22 19:20:59,463 - INFO - Transforming data...
+2025-10-22 19:20:59,465 - INFO - Saving data...
+2025-10-22 19:20:59,475 - INFO - Data saved to CSV: output\Bloomberg_GetData_20251022.csv
+2025-10-22 19:20:59,611 - INFO - Data loaded into SQLite table: bloomberg_getdata
+2025-10-22 19:20:59,611 - INFO - ETL complete. CSV saved to: output\Bloomberg_GetData_20251022.csv. DB saved to: output\market_data.db.
+2025-10-22 19:25:37,326 - INFO - Market Data ETL Process Started
+2025-10-22 19:25:37,329 - ERROR - Invalid interface 'BarxAPI' for vendor 'Bloomberg'
+2025-10-22 19:25:55,228 - INFO - Market Data ETL Process Started
+2025-10-22 19:25:55,233 - INFO - Fetching data for symbols: random sample...
+2025-10-22 19:25:55,401 - INFO - Transforming data...
+2025-10-22 19:25:55,405 - INFO - Saving data...
+2025-10-22 19:25:55,409 - INFO - Data saved to CSV: output\Barclays_BarxAPI_20251022.csv
+2025-10-22 19:25:55,459 - INFO - Data loaded into SQLite table: barclays_barxapi
+2025-10-22 19:25:55,459 - INFO - ETL complete. CSV saved to: output\Barclays_BarxAPI_20251022.csv. DB saved to: output\market_data.db.
+2025-10-22 20:28:18,711 - INFO - Market Data ETL Process Started
+2025-10-22 20:28:18,715 - INFO - Fetching data for symbols: ['MSFT', 'TSLA', 'FAKETICKER']...
+2025-10-22 20:28:18,722 - WARNING - The following symbols were not found and will be skipped: ['FAKETICKER']
+2025-10-22 20:28:18,883 - INFO - Transforming data...
+2025-10-22 20:28:18,885 - INFO - Saving data...
+2025-10-22 20:28:18,891 - INFO - Data saved to CSV: output\Barclays_MarketFeed_20251022.csv
+2025-10-22 20:28:18,949 - INFO - Data loaded into SQLite table: barclays_marketfeed
+2025-10-22 20:28:18,949 - INFO - ETL complete. CSV saved to: output\Barclays_MarketFeed_20251022.csv. DB saved to: output\market_data.db.

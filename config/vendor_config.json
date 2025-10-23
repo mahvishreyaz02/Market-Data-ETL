@@ -1,0 +1,11 @@
+{
+  "Bloomberg": {
+    "interfaces": ["GetData", "GetHistory", "Bpipe"]
+  },
+  "Barclays": {
+    "interfaces": ["BarxAPI", "MarketFeed"]
+  },
+  "DataQuery": {
+    "interfaces": ["DQRestAPI", "DataPull"]
+  }
+}
